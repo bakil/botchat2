@@ -1,0 +1,76 @@
+{% extends "AdminLayout.html" %}
+
+{% block content %}
+<link rel="stylesheet" href="/static/chat.css">
+
+<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.js"></script>
+<!--script src="/static/starrr.js"></script-->
+<div class="container">
+    
+    <div class="messaging">
+        <div class="inbox_msg row"><br>
+            
+            <div class="chat-box col-sm border p-4">
+                
+                <ul class="" id="msg_history">
+                    <li class="incoming_msg">
+                        <img class="bot-avatar" alt="sunil">
+                        <p>Welcome To The ChatBot</p>
+                    </li>
+                    <li class="outgoing_msg">
+                        <p>Welcome To The ChatBot</p>
+                    </li>
+                </ul>
+                <div class="type_msg">
+                    <div class="input_msg_write border rounded-lg">
+                        <input type="text" class="write_msg w3-white rounded-lg" id="btn-input" placeholder="Type a message" />
+                        <button class="msg_send_btn" type="button" id="btn-chat"><i class="fa fa-paper-plane-o"
+                                aria-hidden="true"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm  evaluation-box">
+                
+                    
+
+                    <div id="rate" class="p-4 h-50 bg-info text-white rounded-lg w3-animate-bottom" style="">
+                        <h4 class="p-2">Bot Reply Evaluation</h4>
+                        <h5 class="p-2" id="msg_to_user">This section will be used to evaluate Bot-reply </h5>
+                        <div id="receive_evaluation" style="display: none">
+                            <h5 class="p-2" id="ple">please evaluate the answer:</h5>
+                            <h5 class="p-2" id="th">Thank You!</h5>
+                            <div class="row">
+                                <div class="col-sm">
+                                    <div id='star1'>
+                                        <a href="#" class="fa-star fa"></a>
+                                        <a href="#" class="fa-star-o fa"></a>
+                                        <a href="#" class="fa-star-o fa"></a>
+                                        <a href="#" class="fa-star-o fa"></a>
+                                        <a href="#" class="fa-star-o fa"></a>
+                                    </div>
+                                    <div>&nbsp;
+                                        <span class='p-2 your-choice-was' >
+                                             rating = <span id="selected_star" class='choice'>1</span>.
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="col-sm">
+                                    <button type="button" class="btn btn-primary" id="saveEditReq" onclick="sendEdit()">Send</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+            </div>
+        </div>
+
+
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"
+    integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+<script src="/static/starrr.js"></script>
+
+<script src="/static/chat.js"></script>
+{% endblock %}
